@@ -1,17 +1,25 @@
 <template>
     <div class="sidebar">
+        <div class="user clearfix">
+            <img src="../assets/logo.png" alt="">
+            <p class="fr">用户名</p>
+        </div>
         <ul>
-            <li>11111</li>
-            <li>22222</li>
-            <li>33333</li>
-            <li>44444</li>
+            <li>今天</li>
+            <li>明天</li>
+            <li>昨天</li>
+            <li>前天</li>
         </ul>
     </div>
 </template>
 <script>
-    export default {
-      name: 'sidebar'
+export default {
+  name: 'sidebar',
+  data () {
+    return {
     }
+  }
+}
 </script>
 <style scope lang='less'>
     *{
@@ -19,16 +27,35 @@
         padding: 0;
     }
     .sidebar{
+        position: fixed;
+        left: 0;
+        height: 100%;
         background-color: skyblue;
-        width: 200px;
+        width: 40%;
         height: 100%;
         color:  hotpink;
-        ul{
+        div{
+            margin-top: 50px;
+            vertical-align:middle;
+            img{
+            float: left;
+            // display: block;
+            width: 50px;
+            height: 50px;
+            }
+            p{
+                line-height: 50px;
+            }
+        }
+        ul{ 
             list-style: none;
             text-align: left;
             // height: 30px;
             font-size: 16px;
-            line-height: 16px;
+            line-height: 30px;
+            li{
+                text-align: center;
+            }
         }
     }
 </style>

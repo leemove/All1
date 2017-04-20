@@ -27,6 +27,8 @@ export default {
         padding: 0;
     }
     .sidebar{
+        transform: translateX(-10%);
+        padding: 0 30px;
         position: fixed;
         left: 0;
         height: 100%;

@@ -1,5 +1,5 @@
 <template>
-    <div class="sidebar">
+    <div class="sidebar" >
         <div class="user clearfix">
             <img src="../assets/logo.png" alt="">
             <p class="fr">用户名</p>
@@ -10,6 +10,7 @@
             <li>昨天</li>
             <li>前天</li>
         </ul>
+        <span >X</span>
     </div>
 </template>
 <script>
@@ -22,18 +23,19 @@ export default {
 }
 </script>
 <style scope lang='less'>
+
     *{
         margin: 0;
         padding: 0;
     }
     .sidebar{
-        transform: translateX(-10%);
         padding: 0 30px;
+        float: left;
         position: fixed;
-        left: 0;
+        // left: 0;
         height: 100%;
         background-color: skyblue;
-        width: 40%;
+        // width: 40%;
         height: 100%;
         color:  hotpink;
         div{

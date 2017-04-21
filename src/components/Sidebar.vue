@@ -10,7 +10,7 @@
             <li>昨天</li>
             <li>前天</li>
         </ul>
-        <span >X</span>
+        <span @click='showSilder'>X</span>
     </div>
 </template>
 <script>
@@ -18,6 +18,12 @@ export default {
   name: 'sidebar',
   data () {
     return {
+    }
+  },
+  methods: {
+    showSilder () {
+      // this.msg = '变身!'
+      this.$emit('showSilder')
     }
   }
 }
@@ -29,10 +35,12 @@ export default {
         padding: 0;
     }
     .sidebar{
+        box-shadow:5px 0 5px rgba(0,0,0,.15);
         padding: 0 30px;
-        float: left;
         position: fixed;
-        // left: 0;
+        left: 0;
+        top:0;
+        z-index: 5;
         height: 100%;
         background-color: skyblue;
         // width: 40%;
@@ -60,6 +68,11 @@ export default {
             li{
                 text-align: center;
             }
+        }
+        span{
+          position: absolute;
+          right: 0;
+          bottom: 0;
         }
     }
 </style>

@@ -1,29 +1,31 @@
 <template>
   <div id="app" >
     <transition name="slide-fade">
-      <sidebar 
+      <sidebar  @showSilder='showSilder($event)'
       :isIn='hasSideBar'  v-if="hasSideBar"  >
       </sidebar>
      </transition>   
-    <Hello @showSilder='showSilder($event)' ></Hello>
+    <Hello @showSilder='showSilder($event)' :msg="titile" ></Hello>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 import Sidebar from './components/Sidebar'
 import Hello from './components/Hello'
+import './css/font-awesome.css'
 export default {
   name: 'app',
   components: { Sidebar, Hello },
   data () {
     return {
-      hasSideBar: false
+      hasSideBar: false,
+      titile: '我是标题哈哈'
     }
   },
   methods: {
-    showSilder ($event) {
+    showSilder () {
       this.hasSideBar = !this.hasSideBar
-      console.log($event)
       // $event.prevent()
     }
   }

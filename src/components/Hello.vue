@@ -1,7 +1,7 @@
 <template>
   <header :class='{isMove}'>
-    <div class="item">
-      <i class="fa fa-bars" @click='showSilder($event)'></i>
+    <div class="item" @click='showSilder($event)'>
+      <i class="fa fa-bars" ></i>
     </div>
     
   <p>{{msg}}</p>  
@@ -34,6 +34,7 @@ export default {
     top: 0;
     /*padding: 0 30px;*/
     height: 50px;
+    z-index: 4;
     background-color: #fff;
     -webkit-transition: all   1s;
     -moz-transition: all   1s;

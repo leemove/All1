@@ -20,7 +20,7 @@ export default {
   data () {
     return {
       hasSideBar: false,
-      titile: '我是标题哈哈'
+      titile: '我是标题'
     }
   },
   methods: {
@@ -53,10 +53,16 @@ export default {
 }
 body,html{
   height: 100%;
+  // background-color: skyblue;
+}
+div{
+  // box-shadow:5px 0 5px rgba(0,0,0,.15);
 }
 #app{
   transition: all 1s ease;  
   height: 100%;
+  width: 100%;
+  overflow:visible;
 }
 .clearfix:after{
   content: "020";

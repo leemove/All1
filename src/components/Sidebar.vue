@@ -2,13 +2,13 @@
     <div class="sidebar" >
         <div class="user clearfix">
             <img src="../assets/logo.png" alt="">
-            <p class="fr">用户名</p>
+            <p class="fr">测试开发中</p>
         </div>
         <ul>
-            <li>今天</li>
-            <li>明天</li>
-            <li>昨天</li>
-            <li>前天</li>
+            <li>站长的话</li>
+            <li>我的邮箱<input type="text" value="hg_limu@163.com"></li>
+            <li>未开放,开发中</li>
+            <li>未开放,开发中</li>
         </ul>
         <span @click='showSilder'>X</span>
     </div>
@@ -41,11 +41,10 @@ export default {
         left: 0;
         top:0;
         z-index: 5;
-        height: 100%;
         background-color: skyblue;
-        // width: 40%;
+        width: 40%;
         height: 100%;
-        color:  hotpink;
+        color:  white;
         div{
             margin-top: 50px;
             vertical-align:middle;
@@ -67,12 +66,17 @@ export default {
             line-height: 30px;
             li{
                 text-align: center;
+                input{
+                    background-color: skyblue;
+                    border: none;
+                }
             }
         }
         span{
           position: absolute;
           right: 0;
           bottom: 0;
+          font-size: 40px;
         }
     }
 </style>

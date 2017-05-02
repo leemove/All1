@@ -33,6 +33,9 @@ export default {
 </script>
 
 <style  lang='less'>
+body{
+  margin-top: 50px;
+}
 .slide-fade-enter-active {
 //   transition: all 1s;
   transition: all 1s ease;

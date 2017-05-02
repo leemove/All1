@@ -5,7 +5,7 @@
             <p class="fr">测试开发中</p>
         </div>
         <ul>
-            <li>站长的话</li>
+            <router-link to='/myWords'>站长的话</router-link>
             <li>我的邮箱<input type="text" value="hg_limu@163.com"></li>
             <li>未开放,开发中</li>
             <li>未开放,开发中</li>

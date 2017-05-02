@@ -24,7 +24,7 @@ const Article = mongoose.model('Article', articleSchema)
 const handel = {}
 handel.getToday = function (req, res) {
   Article.find({ author: 'admin' }).exec().then((data) => {
-    console.log(data)
+    // console.log(data)
     res.json(data)
   })
 }

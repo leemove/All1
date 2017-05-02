@@ -1,8 +1,9 @@
 <template>
 <div class="main">
-    <div class="fscreen" >
+   <div class="fscreen" >
+     <img class='load'  v-if='load' src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1492875505065&di=45537a74ce52e8a53171fe8797e77229&imgtype=0&src=http%3A%2F%2Ffile.quweiwu.com%2Fnews%2F20150526102555868.jpg" alt="">
       <div class="img">
-    <img :src="src" alt="我是图">
+        <img :src="src" alt="我是图">
       </div>
         <h1>{{title}}</h1>
         <h3>{{date}} </h3>
@@ -23,10 +24,11 @@ export default {
   },
   data () {
     return {
-      title: '文章标题',
+      title: '读取状态中',
       src: '',
-      date: '某一天',
-      content: ''
+      date: '稍等片刻',
+      content: '',
+      load: true
     }
   },
   methods: {
@@ -37,6 +39,7 @@ export default {
         this.src = artcle.img
         this.date = (artcle.upDate + '').slice(0, 10)
         this.content = artcle.content
+        this.load = false
       }.bind(this))
     }
   },
@@ -50,6 +53,12 @@ export default {
 </script>
 <style lang='less'>
 .main{
+  background-color: #36C3E5;
+  .load{
+    margin-bottom: 100%;
+    width: 100%;
+    top:100px;
+  }
   // padding-top: 50px;
   width: 100%;
   height: 100%;

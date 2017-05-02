@@ -1,0 +1,10 @@
+<template>
+<div>
+<h1>我想说的话都在这里</h1>
+<p>这只是一个小例子,现在还没有足够的能力去让你上线.本来想用这个demo来找工作,现在看起来也是太难了.</p>
+</div>
+</template>
+<script>
+</script>
+<style>
+</style>
